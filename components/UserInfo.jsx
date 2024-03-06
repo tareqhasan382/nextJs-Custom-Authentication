@@ -13,7 +13,7 @@ const UserInfo = () => {
         {session?.user&& <div>
         <p>Name: <span>{session?.user.name}</span> </p>
         <p>Email: <span>{session?.user.email}</span> </p>
-        <p>Email: <span>{session?.user.role}</span> </p>
+        <p>Role: <span>{session?.user.role}</span> </p>
         <p>Address: <span>Agargon Dhaka Bangladesh</span> </p>
         </div>}
         <button onClick={()=>signOut()} className=' mt-5 px-5 py-2 bg-rose-800 rounded-sm text-white font-semibold '>Log out</button>
