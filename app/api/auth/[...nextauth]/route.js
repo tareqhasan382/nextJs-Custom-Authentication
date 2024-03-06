@@ -40,12 +40,12 @@ export const authOptions = {
     newUser: "/signup",
   },
   callbacks: {
-    authorized({ req, auth }) {
-      const protectedPaths = [/\/profile/, /\/order\/(.*)/];
-      const { pathname } = req.nextUrl;
-      if (protectedPaths.some((p) => p.test(pathname))) return !!auth;
-      return true;
-    },
+    // authorized({ req, auth }) {
+    //   const protectedPaths = [/\/profile/, /\/order\/(.*)/];
+    //   const { pathname } = req.nextUrl;
+    //   if (protectedPaths.some((p) => p.test(pathname))) return !!auth;
+    //   return true;
+    // },
     async jwt({ user, trigger, session, token }) {
       if (user) {
         token.user = {
